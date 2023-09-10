@@ -1,11 +1,11 @@
 Planning for our game:
 
 - Have a story
-	- Main character - Monotic edgy ass name
+	- Main character - Monotic
 	- Normal gray creature??
 		- Monotic, he has a normal life, sort-of in a gray kind of world (sad life sort of), repettition of work-home, work-home. Everyone around him has a different color to represent whatever world they're living in. They can change hue (emotion)
 		- , but it's as though he can't change hue due to his situation. 
-		- Then the nebula star hits the earth because of whatever fking reason. The world around him starts to change hue. Buildings become colorful, streets have unknown textures never seen before. He then starts to become colorful.
+		- Then the nebula star hits the earth because of whatever reason. The world around him starts to change hue. Buildings become colorful, streets have unknown textures never seen before. He then starts to become colorful.
 		- He finds new purpose and wants to experiences these new found emotions.
 - Top-down pixel art
 
@@ -24,4 +24,6 @@ Planning for our game:
 				- Greed
 					- 
 				- Safety/Protection
-					-   
+					-  
+
+ 
