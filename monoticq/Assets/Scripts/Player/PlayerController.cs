@@ -34,24 +34,42 @@ public class PlayerController : MonoBehaviour
                 
                 bool success = TryMove(movementInput);
 
+                int lastX;
+                int lastY;
+
                 if(!success) 
                 {
-                    success = TryMove(new Vector2(movementInput.x, 0));
+                    lastY = (int) movementInput.y;
+                    success = TryMove(new Vector2(movementInput.x, lastY));
                 }
 
                 if(!success) 
                 {
-                    success = TryMove(new Vector2(0, movementInput.y));
+                    lastX = (int) movementInput.x;
+                    success = TryMove(new Vector2(lastX, movementInput.y));
                 }
 
-                animator.SetBool("isMoving", success);
+                if (movementInput.y > 0)
+                {
+                    animator.SetBool("isGoingVertical", success);
+                    animator.SetBool("isMoving", false);
+                    animator.SetBool("isGoingDown", false);
+                }
+                else if (movementInput.y < 0)
+                {
+                    animator.SetBool("isGoingDown", success);
+                    animator.SetBool("isGoingVertical", false);
+                    animator.SetBool("isMoving", false);
+                }
+                else
+                {
+                    animator.SetBool("isMoving", success);
+                    animator.SetBool("isGoingVertical", false);
+                    animator.SetBool("isGoingDown", false);
+                }
 
             } 
-            
-            else 
-            {
-                animator.SetBool("isMoving", false);
-            }
+
 
             // Set direction of sprite to movement direction
             if(movementInput.x < 0) 
